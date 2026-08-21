@@ -26,9 +26,9 @@
 <div dir="rtl" data-screen-label="עמוד קצת עליי" style="font-family:'Heebo',sans-serif;background:#fdf8f5;color:#2b1a1f;line-height:1.7;font-size:17px;overflow-x:hidden">
 
   <nav style="position:sticky;top:0;z-index:100;background:rgba(253,248,245,0.9);backdrop-filter:blur(14px);padding:14px 0;border-bottom:1px solid rgba(232,165,180,0.18)">
-    <div style="display:flex;justify-content:space-between;align-items:center;max-width:1240px;margin:0 auto;padding:0 28px;gap:20px">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;max-width:1240px;margin:0 auto;padding:0 clamp(16px,4.5vw,28px);gap:10px 20px">
       <a href="index.html" style="font-family:'Frank Ruhl Libre',serif;font-size:24px;font-weight:700;color:#2b1a1f;letter-spacing:-0.02em;white-space:nowrap">אביבית <span style="color:#a85669;font-weight:400;font-style:italic">בוטיק פרחים</span></a>
-      <div style="display:flex;gap:26px;font-size:15px;flex-wrap:wrap">
+      <div style="display:flex;gap:14px 22px;font-size:15px;flex-wrap:wrap">
         <a href="index.html" style="color:#6b4a52" style-hover="color:#a85669">דף הבית</a>
         <a href="workshops.html" style="color:#6b4a52" style-hover="color:#a85669">סדנאות</a>
         <a href="#" style="color:#a85669;font-weight:600">קצת עליי</a>
@@ -37,9 +37,9 @@
     </div>
   </nav>
 
-  <section data-screen-label="הסיפור" style="padding:64px 0;background:#fbe7ec">
-    <div style="max-width:1240px;margin:0 auto;padding:0 28px">
-      <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:56px;align-items:center">
+  <section data-screen-label="הסיפור" style="padding:clamp(40px,7vw,64px) 0;background:#fbe7ec">
+    <div style="max-width:1240px;margin:0 auto;padding:0 clamp(16px,4.5vw,28px)">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:56px;align-items:center">
         <div style="min-width:0;position:relative">
           <div style="aspect-ratio:4/5;border-radius:6px;overflow:hidden;box-shadow:0 30px 80px rgba(45,27,31,0.12)"><img src="assets/avivit.jpg" alt="אביבית חג'בי בבוטיק הפרחים שלה באשדוד" style="width:100%;height:100%;object-fit:cover;object-position:50% 22%"></div>
           <div style="position:absolute;bottom:-20px;right:-6px;background:#fff;padding:16px 26px;border-radius:4px;box-shadow:0 12px 40px rgba(45,27,31,0.1);font-family:'Frank Ruhl Libre',serif;font-style:italic;color:#a85669;font-size:18px;pointer-events:none">אביבית חג'בי · הבוטיק באשדוד</div>
@@ -57,11 +57,11 @@
     </div>
   </section>
 
-  <section data-screen-label="מה מיוחד" style="padding:56px 0;background:#fdf8f5">
-    <div style="max-width:1240px;margin:0 auto;padding:0 28px">
-      <h2 style="font-family:'Frank Ruhl Libre',serif;font-size:clamp(30px,3.8vw,44px);text-align:center;margin:0 0 12px;font-weight:500;line-height:1.15">לא בוחרים מקטלוג. <em style="font-style:italic;color:#a85669;font-weight:300">יוצרים יחד.</em></h2>
+  <section data-screen-label="מה מיוחד" style="padding:clamp(35px,7vw,56px) 0;background:#fdf8f5">
+    <div style="max-width:1240px;margin:0 auto;padding:0 clamp(16px,4.5vw,28px)">
+      <h2 style="font-family:'Frank Ruhl Libre',serif;font-size:clamp(26px,5.6vw,44px);text-align:center;margin:0 0 12px;font-weight:500;line-height:1.15">לא בוחרים מקטלוג. <em style="font-style:italic;color:#a85669;font-weight:300">יוצרים יחד.</em></h2>
       <p style="text-align:center;max-width:680px;margin:0 auto 36px;color:#6b4a52;font-size:17px">בעולם של זרים מועתקים, אצלי כל זר הוא יצירה חד פעמית, שנולדת מתוך שיחה איתך.</p>
-      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:22px">
         <sc-for list="{{ values }}" as="v" hint-placeholder-count="3">
           <div style="background:#fff;padding:38px 30px;border-radius:8px;text-align:center;border:1px solid rgba(232,165,180,0.18)">
             <div style="width:68px;height:68px;margin:0 auto 20px;border-radius:50%;background:linear-gradient(135deg,#fbe7ec,#f6d2dc);display:flex;align-items:center;justify-content:center;font-size:28px;color:#a85669">{{ v.mark }}</div>
@@ -73,10 +73,10 @@
     </div>
   </section>
 
-  <section data-screen-label="איך זה עובד" style="padding:56px 0;background:linear-gradient(180deg,#fbe7ec 0%,#f6d2dc 100%)">
-    <div style="max-width:1240px;margin:0 auto;padding:0 28px">
-      <h2 style="font-family:'Frank Ruhl Libre',serif;font-size:clamp(30px,3.8vw,44px);text-align:center;margin:0 0 36px;font-weight:500;line-height:1.15">ארבעה צעדים לזר שמדבר <em style="font-style:italic;color:#a85669;font-weight:300">אתכם.</em></h2>
-      <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px">
+  <section data-screen-label="איך זה עובד" style="padding:clamp(35px,7vw,56px) 0;background:linear-gradient(180deg,#fbe7ec 0%,#f6d2dc 100%)">
+    <div style="max-width:1240px;margin:0 auto;padding:0 clamp(16px,4.5vw,28px)">
+      <h2 style="font-family:'Frank Ruhl Libre',serif;font-size:clamp(26px,5.6vw,44px);text-align:center;margin:0 0 36px;font-weight:500;line-height:1.15">ארבעה צעדים לזר שמדבר <em style="font-style:italic;color:#a85669;font-weight:300">אתכם.</em></h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(48%,260px),1fr));gap:20px">
         <sc-for list="{{ steps }}" as="st" hint-placeholder-count="4">
           <div style="text-align:center;padding:24px 14px;background:rgba(255,255,255,0.55);border-radius:8px">
             <div style="font-family:'Frank Ruhl Libre',serif;font-size:52px;color:#a85669;font-weight:300;margin-bottom:10px;line-height:1;font-style:italic">{{ st.n }}</div>
@@ -88,9 +88,9 @@
     </div>
   </section>
 
-  <section data-screen-label="הנעה לפעולה" style="background:#2b1a1f;color:#fff;text-align:center;padding:72px 0">
-    <div style="max-width:700px;margin:0 auto;padding:0 28px">
-      <h2 style="font-family:'Frank Ruhl Libre',serif;font-size:clamp(34px,4.6vw,52px);margin:0 0 18px;color:#fff;font-weight:500;line-height:1.15">בואי <em style="color:#ecb1c0;font-style:italic;font-weight:300">נדבר</em> על הזר שלך.</h2>
+  <section data-screen-label="הנעה לפעולה" style="background:#2b1a1f;color:#fff;text-align:center;padding:clamp(45px,7vw,72px) 0">
+    <div style="max-width:700px;margin:0 auto;padding:0 clamp(16px,4.5vw,28px)">
+      <h2 style="font-family:'Frank Ruhl Libre',serif;font-size:clamp(28px,6vw,52px);margin:0 0 18px;color:#fff;font-weight:500;line-height:1.15">בואי <em style="color:#ecb1c0;font-style:italic;font-weight:300">נדבר</em> על הזר שלך.</h2>
       <p style="color:rgba(255,255,255,0.78);margin:0 auto 28px;font-size:17px;line-height:1.7">שיחה קצרה, בלי התחייבות ובלי קטלוג. רק להכיר, להבין את הרגע, וליצור יחד.</p>
       <a href="{{ waMain }}" target="_blank" style="background:#a85669;color:#fff;padding:18px 44px;border-radius:999px;font-weight:500;font-size:17px;display:inline-flex;align-items:center;gap:10px" style-hover="background:#c97a8e;color:#fff">התחילי שיחה בוואטסאפ ←</a>
     </div>
