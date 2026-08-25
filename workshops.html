@@ -33,16 +33,16 @@
         <a href="#" style="color:#a85669;font-weight:600">סדנאות</a>
         <a href="about.html" style="color:#6b4a52" style-hover="color:#a85669">קצת עליי</a>
       </div>
-      <a href="{{ waWorkshop }}" target="_blank" style="background:#2b1a1f;color:#fff;padding:10px 22px;border-radius:999px;font-size:14px;font-weight:500;white-space:nowrap" style-hover="background:#a85669;color:#fff">בדקי מועדים</a>
+      <a href="{{ waWorkshop }}" target="_blank" style="background:#2b1a1f;color:#fff;padding:10px 22px;border-radius:999px;font-size:14px;font-weight:500;white-space:nowrap" style-hover="background:#a85669;color:#fff">בדקו מועדים</a>
     </div>
   </nav>
 
   <section data-screen-label="פתיח סדנאות" style="background:radial-gradient(ellipse at top, rgba(255,255,255,0.5), transparent 70%),linear-gradient(180deg,#fbe7ec 0%,#f6d2dc 100%);padding:64px 0 56px;text-align:center">
     <div style="max-width:800px;margin:0 auto;padding:0 clamp(16px,4.5vw,28px)">
-      <div style="font-size:12px;letter-spacing:5px;color:#a85669;text-transform:uppercase;margin-bottom:18px;font-weight:600;display:inline-block;padding:7px 16px;border:1px solid rgba(201,122,142,0.3);border-radius:999px;background:rgba(255,255,255,0.5)">סדנאות חוויתיות · אשדוד</div>
-      <h1 style="font-family:'Frank Ruhl Libre',serif;font-size:clamp(38px,5vw,64px);line-height:1.12;margin:0 0 18px;font-weight:500">שעתיים של פרחים,<br>צחוק וידיים <em style="font-style:italic;color:#a85669;font-weight:300">בירוק.</em></h1>
-      <p style="font-size:18px;color:#6b4a52;margin:0 0 28px;line-height:1.7">לומדים לבנות זר מקצועי מאפס: בחירת פרחים, קומפוזיציה וסודות מהסטודיו.<br>כל משתתפת חוזרת הביתה עם זר משלה, וחוויה שנשארת הרבה אחרי שהפרחים נבלו.</p>
-      <a href="{{ waWorkshop }}" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:#2b1a1f;color:#fff;padding:16px 36px;border-radius:999px;font-size:16px;font-weight:500;box-shadow:0 12px 36px rgba(45,27,31,0.18)" style-hover="background:#a85669;color:#fff">בדקי מועדים פנויים בוואטסאפ ←</a>
+      <div style="font-size:12px;letter-spacing:5px;color:#a85669;text-transform:uppercase;margin-bottom:18px;font-weight:600;display:inline-block;padding:7px 16px;border:1px solid rgba(201,122,142,0.3);border-radius:999px;background:rgba(255,255,255,0.5)">סדנאות לחגיגות · אשדוד</div>
+      <h1 style="font-family:'Frank Ruhl Libre',serif;font-size:clamp(38px,5vw,64px);line-height:1.12;margin:0 0 18px;font-weight:500">מסיבת רווקות,<br>יום הולדת, <em style="font-style:italic;color:#a85669;font-weight:300">ערב בנות.</em></h1>
+      <p style="font-size:18px;color:#6b4a52;margin:0 0 28px;line-height:1.7">סדנת שזירה שנתפרת סביב החגיגה שלכם: שולחן עמוס פרחים, נרות, מוזיקה וידיים בעבודה.<br>כל אחד ואחת בונים זר משלהם וחוזרים איתו הביתה. מזכרת מהערב שנשארת גם אחרי שהפרחים נבלו.</p>
+      <a href="{{ waWorkshop }}" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:#2b1a1f;color:#fff;padding:16px 36px;border-radius:999px;font-size:16px;font-weight:500;box-shadow:0 12px 36px rgba(45,27,31,0.18)" style-hover="background:#a85669;color:#fff">בדקו מועדים פנויים בוואטסאפ ←</a>
     </div>
   </section>
 
@@ -51,7 +51,7 @@
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px">
         <sc-for list="{{ workshops }}" as="w" hint-placeholder-count="3">
           <div style="background:#fff;border-radius:8px;border:1px solid rgba(232,165,180,0.25);box-shadow:0 4px 20px rgba(45,27,31,0.06);overflow:hidden;display:flex;flex-direction:column">
-            <div style="height:220px"><image-slot id="{{ w.slot }}" shape="rect" placeholder="{{ w.imgNote }}"></image-slot></div>
+            <div style="height:220px;overflow:hidden"><img src="{{ w.img }}" alt="{{ w.name }}" style="width:100%;height:100%;object-fit:cover"></div>
             <div style="padding:28px 26px 26px;display:flex;flex-direction:column;gap:12px;flex:1;text-align:center">
               <h3 style="font-family:'Frank Ruhl Libre',serif;font-size:25px;margin:0;font-weight:500">{{ w.name }}</h3>
               <p style="color:#6b4a52;font-size:15px;line-height:1.7;margin:0;flex:1">{{ w.desc }}</p>
@@ -83,7 +83,7 @@
     <div style="max-width:1240px;margin:0 auto;padding:0 clamp(16px,4.5vw,28px)">
       <div style="font-size:12px;letter-spacing:4px;color:#a85669;text-transform:uppercase;margin-bottom:14px;text-align:center;font-weight:600">מהסדנאות</div>
       <h2 style="font-family:'Frank Ruhl Libre',serif;font-size:clamp(26px,5.6vw,44px);text-align:center;margin:0 0 12px;font-weight:500;line-height:1.15">ככה זה נראה <em style="font-style:italic;color:#a85669;font-weight:300">מבפנים.</em></h2>
-      <p style="text-align:center;max-width:640px;margin:0 auto 36px;color:#6b4a52;font-size:17px">רגעים קטנים מתוך הסדנאות: ידיים בעבודה, פרחים על השולחן, וזר שנולד.</p>
+      <p style="text-align:center;max-width:640px;margin:0 auto 36px;color:#6b4a52;font-size:17px">רגעים מתוך החגיגות: ידיים בעבודה, שולחן עמוס פרחים, וזר שנולד.</p>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:22px">
         <div style="background:#fff;border-radius:10px;border:1px solid rgba(232,165,180,0.25);box-shadow:0 4px 20px rgba(45,27,31,0.06);overflow:hidden">
           <div style="aspect-ratio:9/16;background:#fbe7ec"><iframe src="{{ reelEmbed }}" title="סרטון מסדנה" loading="lazy" allowfullscreen="true" scrolling="no" frameborder="0" style="width:100%;height:100%;border:0;display:block"></iframe></div>
@@ -93,17 +93,15 @@
           </div>
         </div>
         <div style="background:#fff;border-radius:10px;border:1px solid rgba(232,165,180,0.25);box-shadow:0 4px 20px rgba(45,27,31,0.06);overflow:hidden">
-          <div style="aspect-ratio:9/16;background:#fbe7ec"><iframe src="{{ reelEmbed }}" title="סרטון מסדנה" loading="lazy" allowfullscreen="true" scrolling="no" frameborder="0" style="width:100%;height:100%;border:0;display:block"></iframe></div>
-          <div style="padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px">
-            <span style="font-family:'Frank Ruhl Libre',serif;font-size:18px;color:#2b1a1f">קבוצה קטנה, יחס אישי</span>
-            <a href="{{ reelUrl }}" target="_blank" style="font-size:14px;color:#a85669;font-weight:500">לצפייה באינסטגרם ←</a>
+          <div style="aspect-ratio:9/16;background:#fbe7ec"><img src="assets/w-party1.jpg" alt="שולחן הסדנה עמוס פרחים ונרות" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+          <div style="padding:16px 20px">
+            <span style="font-family:'Frank Ruhl Libre',serif;font-size:18px;color:#2b1a1f">שולחן שנראה כמו חגיגה</span>
           </div>
         </div>
         <div style="background:#fff;border-radius:10px;border:1px solid rgba(232,165,180,0.25);box-shadow:0 4px 20px rgba(45,27,31,0.06);overflow:hidden">
-          <div style="aspect-ratio:9/16;background:#fbe7ec"><iframe src="{{ reelEmbed }}" title="סרטון מסדנה" loading="lazy" allowfullscreen="true" scrolling="no" frameborder="0" style="width:100%;height:100%;border:0;display:block"></iframe></div>
-          <div style="padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px">
-            <span style="font-family:'Frank Ruhl Libre',serif;font-size:18px;color:#2b1a1f">הזר שחוזר איתך הביתה</span>
-            <a href="{{ reelUrl }}" target="_blank" style="font-size:14px;color:#a85669;font-weight:500">לצפייה באינסטגרם ←</a>
+          <div style="aspect-ratio:9/16;background:#fbe7ec"><img src="assets/w-party2.jpg" alt="משתתפים שוזרים זרים בסדנה" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+          <div style="padding:16px 20px">
+            <span style="font-family:'Frank Ruhl Libre',serif;font-size:18px;color:#2b1a1f">כל אחד והזר שלו</span>
           </div>
         </div>
       </div>
@@ -113,7 +111,7 @@
   <section data-screen-label="הנעה לפעולה" style="background:#2b1a1f;color:#fff;text-align:center;padding:clamp(45px,7vw,72px) 0">
     <div style="max-width:700px;margin:0 auto;padding:0 clamp(16px,4.5vw,28px)">
       <h2 style="font-family:'Frank Ruhl Libre',serif;font-size:clamp(28px,6vw,52px);margin:0 0 18px;color:#fff;font-weight:500;line-height:1.15">שריינו <em style="color:#ecb1c0;font-style:italic;font-weight:300">מקום</em> בסדנה הקרובה.</h2>
-      <p style="color:rgba(255,255,255,0.78);margin:0 auto 28px;font-size:17px;line-height:1.7">הקבוצות קטנות והמקומות נגמרים מהר. שלחו הודעה ונמצא לכן תאריך.</p>
+      <p style="color:rgba(255,255,255,0.78);margin:0 auto 28px;font-size:17px;line-height:1.7">הקבוצות קטנות והמקומות נגמרים מהר. שלחו הודעה ונמצא לכם תאריך.</p>
       <a href="{{ waWorkshop }}" target="_blank" style="background:#a85669;color:#fff;padding:18px 44px;border-radius:999px;font-weight:500;font-size:17px;display:inline-flex;align-items:center;gap:10px" style-hover="background:#c97a8e;color:#fff">שריינו מקום בוואטסאפ ←</a>
     </div>
   </section>
@@ -122,7 +120,7 @@
     © אביבית בוטיק פרחים · אשדוד · <a href="index.html" style="color:#a85669">חזרה לדף הבית</a>
   </footer>
 
-  <a href="{{ waWorkshop }}" target="_blank" aria-label="שלחי הודעה בוואטסאפ" style="position:fixed;bottom:24px;left:24px;background:#25d366;color:#fff;padding:14px 24px;border-radius:999px;display:flex;align-items:center;gap:8px;font-weight:600;font-size:15px;box-shadow:0 10px 30px rgba(37,211,102,0.4);z-index:50" style-hover="transform:scale(1.06);color:#fff">וואטסאפ ✆</a>
+  <a href="{{ waWorkshop }}" target="_blank" aria-label="שליחת הודעה בוואטסאפ" style="position:fixed;bottom:24px;left:24px;background:#25d366;color:#fff;padding:14px 24px;border-radius:999px;display:flex;align-items:center;gap:8px;font-weight:600;font-size:15px;box-shadow:0 10px 30px rgba(37,211,102,0.4);z-index:50" style-hover="transform:scale(1.06);color:#fff">וואטסאפ ✆</a>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;whatsappNumber&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;0507915259&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;יצירת קשר&quot;}}">
@@ -132,18 +130,18 @@ class Component extends DCLogic {
     const intl = raw.startsWith('0') ? '972' + raw.slice(1) : raw;
     const wa = (t) => 'https://wa.me/' + intl + '?text=' + encodeURIComponent(t);
     return {
-      waWorkshop: wa('היי אביבית, אשמח לפרטים על הסדנאות'),
+      waWorkshop: wa('היי אביבית, אשמח לפרטים על סדנאות לחגיגות'),
       reelUrl: 'https://www.instagram.com/reel/DaaYQbFuG6X/',
       reelEmbed: 'https://www.instagram.com/reel/DaaYQbFuG6X/embed/',
       workshops: [
-        { slot: 'ws-open', imgNote: 'תמונה מסדנה פתוחה', name: 'סדנה פתוחה בסטודיו', desc: 'ערב שזירה אינטימי בקבוצה קטנה. באות לבד, עם חברה או בזוג, ויוצאות עם זר שלכן ועם חיוך.', meta: 'כשעתיים · כולל זר הביתה', href: wa('היי אביבית, אשמח להירשם לסדנה פתוחה בסטודיו') },
-        { slot: 'ws-team', imgNote: 'תמונה מיום גיבוש', name: 'ימי גיבוש לצוותים', desc: 'חוויה מקורית לחברות וצוותים: שזירה, מוזיקה ואווירה טובה. אצלכם במשרד או אצלי.', meta: 'קבוצות · בתיאום מראש', href: wa('היי אביבית, אשמח להצעה לסדנת גיבוש לצוות') },
-        { slot: 'ws-private', imgNote: 'תמונה מאירוע פרטי', name: 'אירועים פרטיים', desc: 'ימי הולדת, מסיבות רווקות ואירוח מפנק: סדנה שנתפרת בדיוק לרגע שלכן.', meta: 'בהתאמה אישית', href: wa('היי אביבית, אשמח לסדנה לאירוע פרטי') },
+        { img: 'assets/w-party1.jpg', name: 'מסיבת רווקות', desc: 'הפתעה מושלמת לכלה: שולחן פרחים מעוצב, שמפניה וצחוקים, וכל משתתפת יוצאת עם זר משלה.', meta: 'כשעתיים · זר לכל משתתף', href: wa('היי אביבית, אשמח לפרטים על סדנה למסיבת רווקות') },
+        { img: 'assets/w-party2.jpg', name: 'ימי הולדת', desc: 'חגיגה אחרת לגמרי, לצעירים ולמבוגרים. במקום עוד מסעדה, ערב שיוצרים בו משהו ביחד.', meta: 'כל גיל · בסטודיו או אצלכם', href: wa('היי אביבית, אשמח לפרטים על סדנה ליום הולדת') },
+        { img: 'assets/s-magenta.jpg', name: 'ערב בנות', desc: 'חברים וחברות, אמא ובת או צוות קטן שרוצה ערב מפנק. פרחים, נרות ואווירה טובה בלי שום לחץ.', meta: 'בהתאמה אישית', href: wa('היי אביבית, אשמח לפרטים על סדנה לערב בנות') },
       ],
       facts: [
-        { mark: '✿', title: 'הכל כלול', text: 'פרחים, כלים וחומרי עזר. באות עם ידיים ריקות וחוזרות עם זר.' },
-        { mark: '❀', title: 'בלי ניסיון קודם', text: 'מתאים גם למי שמעולם לא שזרה. מלווה אתכן צעד אחר צעד.' },
-        { mark: '✾', title: 'קבוצות קטנות', text: 'יחס אישי לכל משתתפת, בלי להרגיש אבודה בהמון.' },
+        { mark: '✿', title: 'הכול כלול', text: 'פרחים, כלים וחומרי עזר. באים עם ידיים ריקות וחוזרים עם זר.' },
+        { mark: '❀', title: 'בלי ניסיון קודם', text: 'מתאים גם למי שמעולם לא שזר. אני מלווה אתכם צעד אחר צעד.' },
+        { mark: '✾', title: 'קבוצות קטנות', text: 'יחס אישי לכל משתתף, בלי להרגיש אבודים בהמון.' },
         { mark: '✽', title: 'אשדוד והסביבה', text: 'בסטודיו שלי או אצלכם, לפי מה שנוח לקבוצה.' },
       ],
     };

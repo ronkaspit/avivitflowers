@@ -33,7 +33,7 @@
         <a href="workshops.html" style="color:#6b4a52" style-hover="color:#a85669">סדנאות</a>
         <a href="#" style="color:#a85669;font-weight:600">קצת עליי</a>
       </div>
-      <a href="{{ waMain }}" target="_blank" style="background:#2b1a1f;color:#fff;padding:10px 22px;border-radius:999px;font-size:14px;font-weight:500;white-space:nowrap" style-hover="background:#a85669;color:#fff">בואי נדבר</a>
+      <a href="{{ waMain }}" target="_blank" style="background:#2b1a1f;color:#fff;padding:10px 22px;border-radius:999px;font-size:14px;font-weight:500;white-space:nowrap" style-hover="background:#a85669;color:#fff">בואו נדבר</a>
     </div>
   </nav>
 
@@ -60,7 +60,7 @@
   <section data-screen-label="מה מיוחד" style="padding:clamp(35px,7vw,56px) 0;background:#fdf8f5">
     <div style="max-width:1240px;margin:0 auto;padding:0 clamp(16px,4.5vw,28px)">
       <h2 style="font-family:'Frank Ruhl Libre',serif;font-size:clamp(26px,5.6vw,44px);text-align:center;margin:0 0 12px;font-weight:500;line-height:1.15">לא בוחרים מקטלוג. <em style="font-style:italic;color:#a85669;font-weight:300">יוצרים יחד.</em></h2>
-      <p style="text-align:center;max-width:680px;margin:0 auto 36px;color:#6b4a52;font-size:17px">בעולם של זרים מועתקים, אצלי כל זר הוא יצירה חד פעמית, שנולדת מתוך שיחה איתך.</p>
+      <p style="text-align:center;max-width:680px;margin:0 auto 36px;color:#6b4a52;font-size:17px">בעולם של זרים מועתקים, אצלי כל זר הוא יצירה חד-פעמית, שנולדת מתוך שיחה איתכם.</p>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:22px">
         <sc-for list="{{ values }}" as="v" hint-placeholder-count="3">
           <div style="background:#fff;padding:38px 30px;border-radius:8px;text-align:center;border:1px solid rgba(232,165,180,0.18)">
@@ -90,9 +90,9 @@
 
   <section data-screen-label="הנעה לפעולה" style="background:#2b1a1f;color:#fff;text-align:center;padding:clamp(45px,7vw,72px) 0">
     <div style="max-width:700px;margin:0 auto;padding:0 clamp(16px,4.5vw,28px)">
-      <h2 style="font-family:'Frank Ruhl Libre',serif;font-size:clamp(28px,6vw,52px);margin:0 0 18px;color:#fff;font-weight:500;line-height:1.15">בואי <em style="color:#ecb1c0;font-style:italic;font-weight:300">נדבר</em> על הזר שלך.</h2>
+      <h2 style="font-family:'Frank Ruhl Libre',serif;font-size:clamp(28px,6vw,52px);margin:0 0 18px;color:#fff;font-weight:500;line-height:1.15">בואו <em style="color:#ecb1c0;font-style:italic;font-weight:300">נדבר</em> על הזר שלכם.</h2>
       <p style="color:rgba(255,255,255,0.78);margin:0 auto 28px;font-size:17px;line-height:1.7">שיחה קצרה, בלי התחייבות ובלי קטלוג. רק להכיר, להבין את הרגע, וליצור יחד.</p>
-      <a href="{{ waMain }}" target="_blank" style="background:#a85669;color:#fff;padding:18px 44px;border-radius:999px;font-weight:500;font-size:17px;display:inline-flex;align-items:center;gap:10px" style-hover="background:#c97a8e;color:#fff">התחילי שיחה בוואטסאפ ←</a>
+      <a href="{{ waMain }}" target="_blank" style="background:#a85669;color:#fff;padding:18px 44px;border-radius:999px;font-weight:500;font-size:17px;display:inline-flex;align-items:center;gap:10px" style-hover="background:#c97a8e;color:#fff">התחילו שיחה בוואטסאפ ←</a>
     </div>
   </section>
 
@@ -100,7 +100,7 @@
     © אביבית בוטיק פרחים · אשדוד · <a href="index.html" style="color:#a85669">חזרה לדף הבית</a>
   </footer>
 
-  <a href="{{ waMain }}" target="_blank" aria-label="שלחי הודעה בוואטסאפ" style="position:fixed;bottom:24px;left:24px;background:#25d366;color:#fff;padding:14px 24px;border-radius:999px;display:flex;align-items:center;gap:8px;font-weight:600;font-size:15px;box-shadow:0 10px 30px rgba(37,211,102,0.4);z-index:50" style-hover="transform:scale(1.06);color:#fff">וואטסאפ ✆</a>
+  <a href="{{ waMain }}" target="_blank" aria-label="שליחת הודעה בוואטסאפ" style="position:fixed;bottom:24px;left:24px;background:#25d366;color:#fff;padding:14px 24px;border-radius:999px;display:flex;align-items:center;gap:8px;font-weight:600;font-size:15px;box-shadow:0 10px 30px rgba(37,211,102,0.4);z-index:50" style-hover="transform:scale(1.06);color:#fff">וואטסאפ ✆</a>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;whatsappNumber&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;0507915259&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;יצירת קשר&quot;}}">
@@ -112,13 +112,13 @@ class Component extends DCLogic {
     return {
       waMain: wa('היי אביבית, הגעתי דרך האתר ואשמח לשיחה'),
       values: [
-        { mark: '✿', title: 'שיחה אישית', text: 'לפני שאני יוצרת, אני שואלת. מי הוא? מה האירוע? איזה רגע אנחנו רוצות ליצור? כי זר טוב מתחיל מהקשבה טובה.' },
+        { mark: '✿', title: 'שיחה אישית', text: 'לפני שאני יוצרת, אני שואלת. מי מקבל אותו? מה האירוע? איזה רגע אנחנו רוצים ליצור? כי זר טוב מתחיל מהקשבה טובה.' },
         { mark: '❀', title: 'סיפור ורגש', text: 'כל זר אצלי הוא יצירה ייחודית עם נשמה. עם סיפור. עם רגש שמתחבר בדיוק לאדם שיקבל אותו.' },
         { mark: '✾', title: 'חוויה, לא קנייה', text: 'אצלי לא קונים פרחים. אצלי יוצרים רגע. רגע שיישאר בזיכרון הרבה אחרי שהפרחים יסיימו לפרוח.' },
       ],
       steps: [
-        { n: '01', title: 'בואי נדבר', text: 'שיחה קצרה איתי, אביבית. בלי לחץ, בלי קטלוגים. רק להכיר.' },
-        { n: '02', title: 'אני שומעת', text: 'על האירוע, על האדם שיקבל, על הרגע שאת רוצה ליצור.' },
+        { n: '01', title: 'בואו נדבר', text: 'שיחה קצרה איתי, אביבית. בלי לחץ, בלי קטלוגים. רק להכיר.' },
+        { n: '02', title: 'אני שומעת', text: 'על האירוע, על האדם שיקבל, על הרגע שאתם רוצים ליצור.' },
         { n: '03', title: 'אני יוצרת', text: 'זר ייחודי שמתאים בדיוק לסיפור הזה. רק שלכם, רק לרגע הזה.' },
         { n: '04', title: 'הם מתרגשים', text: 'לא רק פרחים. רגע. סיפור. התרגשות אמיתית, ממש כזו.' },
       ],
